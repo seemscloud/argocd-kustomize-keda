@@ -14,12 +14,11 @@ spec:
     repoURL: https://kedacore.github.io/charts
     targetRevision: 2.8.2
     helm:
-      value:
-        parameters:
-          - name: prometheus.metricServer.enabled
-            value: "true"
-          - name: prometheus.operator.enabled
-            value: "true"
+      parameters:
+        - name: prometheus.metricServer.enabled
+          value: "true"
+        - name: prometheus.operator.enabled
+          value: "true"
   syncPolicy:
     automated:
       prune: true
