@@ -13,7 +13,7 @@ patches:
         value: "in-cluster"
       - op: replace
         path: /spec/source/path
-        value: "overlays/in-cluster"
+        value: "deployment/overlays/in-cluster"
     target:
       kind: Application
       name: keda-provisioning

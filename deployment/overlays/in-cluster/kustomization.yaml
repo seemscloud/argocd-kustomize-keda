@@ -11,6 +11,9 @@ patches:
       - op: replace
         path: /spec/destination/name
         value: "in-cluster"
+      - op: replace
+        path: /spec/destination/name
+        value: "in-cluster"
     target:
       kind: Application
       name: keda-provisioning
