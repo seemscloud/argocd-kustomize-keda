@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: keda-provisioning
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+  namespace: argocd-system
+spec:
+  destination:
+    namespace: keda-system
+  project: default
+  source:
+    repoURL: git@github.com:seemscloud/kustomize-keda-helm-deploy.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true

@@ -1,0 +1,19 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - ../../base
+
+namePrefix: in-cluster-
+
+patches:
+  - patch: |-
+      - op: replace
+        path: /spec/destination/name
+        value: "in-cluster"
+      - op: replace
+        path: /spec/source/path
+        value: "overlays/in-cluster"
+    target:
+      kind: Application
+      name: keda-provisioning
