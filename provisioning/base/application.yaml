@@ -10,7 +10,7 @@ spec:
     namespace: keda-system
   project: default
   source:
-    repoURL: git@github.com:seemscloud/kustomize-keda-helm-deploy.git
+    repoURL: https://github.com/seemscloud/argocd-kustomize-keda.git
     targetRevision: HEAD
   syncPolicy:
     automated:
