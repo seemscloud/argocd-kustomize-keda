@@ -16,4 +16,4 @@ patches:
         value: "in-cluster"
     target:
       kind: Application
-      name: keda-provisioning
+      name: keda-deployment
